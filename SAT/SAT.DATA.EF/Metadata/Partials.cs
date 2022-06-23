@@ -22,7 +22,9 @@ namespace SAT.DATA.EF.Models
     public partial class ScheduledClassStatus { }
 
     [ModelMetadataType(typeof(StudentMetadata))]
-    public partial class Student { }
+    public partial class Student {
+        public string FullName { get { return $"{FirstName} {LastName}"; } }
+    }
 
     [ModelMetadataType(typeof(StudentStatusMetadata))]
     public partial class StudentStatus { }

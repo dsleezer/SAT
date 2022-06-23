@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-<!DOCTYPE html>
 
 <html lang="en">
 
@@ -38,6 +37,7 @@
     <link href="~/css/plugins.css" rel="stylesheet">
     <link href="~/style.css" rel="stylesheet">
     <link href="~/css/alt-colors.css" rel="stylesheet">
+    <link href="~/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -104,11 +104,11 @@
             </div>
         </div>
         @*End Nav Bar*@
-        <section class="p-3">
-            
-            @RenderBody();
 
-        </section>
+
+        @RenderBody();
+
+
 
 
         @*Footer Start*@
@@ -117,10 +117,10 @@
                 <div class="container">
                     <div class="row cta">
                         <div class="col-sm-9">
-                            <h4>Do you want to know more? We are here to help.</h4>
+                            <h4>Having trouble being <strong>SUPER AWESOME</strong>? We're here to help!</h4>
                         </div>
                         <div class="col-sm-3 text-right">
-                            <a href="#" class="btn btn-white btn-lg">Get In Touch</a>
+                            <a href="#" class="btn btn-white btn-lg">Contact Us Today!</a>
                         </div>
                     </div>
                 </div>
@@ -148,44 +148,33 @@
                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                 <ul class="list-unstyled">
                                                     <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Teachers</a>
+                                                        <i class="fa fa-angle-right"></i><a href="@Url.Action("Index", "Home")">Home</a>
                                                     </li>
                                                     <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Courses</a>
+                                                        <i class="fa fa-angle-right"></i><a href="@Url.Action("Index", "Courses")">Courses</a>
                                                     </li>
                                                     <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Support</a>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Why Scholar</a>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Social Media</a>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Site Map</a>
+                                                        <i class="fa fa-angle-right"></i><a href="@Url.Action("Index", "Students")">Students</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                 <ul class="list-unstyled">
                                                     <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Company</a>
+                                                        <i class="fa fa-angle-right"></i><a href="@Url.Action("Index", "Enrollments")">Enrollment</a>
                                                     </li>
                                                     <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Latest Courses</a>
+                                                        <i class="fa fa-angle-right"></i><a href="@Url.Action("Index", "ScheduledClasses")">Classes</a>
                                                     </li>
                                                     <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Partners</a>
+                                                        <i class="fa fa-angle-right"></i><a href="@Url.Action("Index", "StudentStatus")">Student Status</a>
                                                     </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <ul class="list-unstyled">
                                                     <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Blog Post</a>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Help Topic</a>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-angle-right"></i><a href="#">Policies</a>
+                                                        <i class="fa fa-angle-right"></i><a target="_blank" href="~/_Archive/index.html">Template Navigation</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -195,68 +184,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <div class="col-md-3 col-sm-6 col-xs-6">
-                            <div class="gallery-widget widget">
-                                <h4 class="widget-title mb40">Gallery</h4>
-                                <div class="widget-content">
-                                    <div class="gallery-list">
-                                        <a class="thumb" href="#">
-                                            <img alt="" class="img-responsive" src="https://unsplash.it/300/300?image=548">
-                                        </a>
-                                        <a class="thumb" href="#">
-                                            <img alt="" class="img-responsive" src="https://unsplash.it/300/300?image=659">
-                                        </a>
-                                        <a class="thumb" href="#">
-                                            <img alt="" class="img-responsive" src="https://unsplash.it/300/300?image=974">
-                                        </a>
-                                        <a class="thumb" href="#">
-                                            <img alt="" class="img-responsive" src="https://unsplash.it/300/300?image748">
-                                        </a>
-                                        <a class="thumb" href="#">
-                                            <img alt="" class="img-responsive" src="https://unsplash.it/300/300?image=484">
-                                        </a>
-                                        <a class="thumb" href="#">
-                                            <img alt="" class="img-responsive" src="https://unsplash.it/300/300?image=298">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6">
-                            <div class="mailing-widget widget">
-                                <h4 class="widget-title mb40">Mailing List</h4>
-                                <div class="content-wiget">
-                                    <p class="mb40">Subscribe to our newsletter for the latest updates and offers.</p>
-                                    <form action="index.html">
-                                        <div class="input-group">
-                                            <input class="form-control form-email-widget" placeholder="Email address" type="text"><span class="input-group-btn"><input class="btn btn-email" type="submit" value="✓"></span>
-                                        </div>
-                                    </form>
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 footer-social">
-                        <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-                        <a class="google" href="#"><i class="fa fa-google-plus"></i></a>
-                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                        <a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
-                        <a class="blog" href="#"><i class="fa fa-rss"></i></a>
-                        <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
-                    </div>
-                    <div class="col-md-6 text-right">
-                        <p class="copyright"><small>© 2019. Designed and Developed by <a href="http://www.distinctivethemes.com" target="_blank">Distinctive Themes</a></small></p>
+                    <div class="col-md-3 col-sm-6 col-xs-6">
                     </div>
                 </div>
             </div>
-        </footer>
+            <div class="row px-5">
+                <div class="col-md-6 footer-social">
+                    <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="google" href="#"><i class="fa fa-google-plus"></i></a>
+                    <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                    <a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+                    <a class="blog" href="#"><i class="fa fa-rss"></i></a>
+                    <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+                </div>
+                <div class="col-md-6 text-right">
+                    <p class="copyright"><small>© 2019. Designed and Developed by <a href="http://www.distinctivethemes.com" target="_blank">Distinctive Themes</a></small></p>
+                </div>
+            </div>
+    </div>
+    </footer>
 
-        <a href="#" id="back-to-top"><i class="fa fa-long-arrow-up"></i></a>
-        @*Footer End*@
+    <a href="#" id="back-to-top"><i class="fa fa-long-arrow-up"></i></a>
+    @*Footer End*@
 
     </div>
 
