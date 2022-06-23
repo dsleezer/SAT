@@ -391,6 +391,8 @@
 }
 
 
-#course-tabs .li {
-    background-color: blue !important;
+#course-tabs li {
+    background-color: rgba(102, 51, 153, 0.8);
+    min-height: 4em;
+
 }

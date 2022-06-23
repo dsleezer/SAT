@@ -28,11 +28,11 @@
                                 <div class="col-sm-12">
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-justified image-tabs" id="course-tabs" role="tablist">
-                                        @foreach (var item in Model)
+                                        @foreach (var item in ViewBag.Courses)
                                         {
-                                            <li role="presentation" class="summer-term active">
+                                            <li role="presentation" class="">
                                                 <a href="#summer-term" aria-controls="summer-term" role="tab" data-toggle="tab" class=".half-opacity ">
-                                                    <span>@item.ScheduledClass.Course.CourseName</span>
+                                                    <span>@item.CourseName</span>
                                                 </a>
                                             </li>
 
