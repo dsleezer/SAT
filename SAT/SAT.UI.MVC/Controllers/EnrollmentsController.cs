@@ -19,16 +19,21 @@ namespace SAT.UI.MVC.Controllers
         }
 
         // GET: Enrollments
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int courseId = 0)
         {
 
-            var sATContext = _context.Enrollments.Include(e => e.ScheduledClass).Include(e => e.Student).Include(e => e.ScheduledClass.Course).Include(e => e.ScheduledClass.Scs);
+            var sATContext = _context.Enrollments.Include(e => e.ScheduledClass).Include(e => e.Student).Include(e => e.ScheduledClass.Course).Include(e => e.ScheduledClass.Scs).ToList();
 
             var courses = _context.Courses.ToList();
 
             ViewBag.Courses = courses;
 
-            return View(await sATContext.ToListAsync());
+            if (courseId != 0)
+            {
+                sATContext = sATContext.Where(e => e.ScheduledClass.CourseId == courseId).ToList();
+            }
+
+            return View(sATContext);
         }
 
         
