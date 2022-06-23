@@ -1,319 +1,127 @@
 ﻿@model IEnumerable<SAT.DATA.EF.Models.Enrollment>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Enrollment";
 }
 
-<h2>Index</h2>
 
-        <header id="home" class="backstretched single-page-hero">
-            <div class="dark-overlay single-page-hero">
-                <div class="container single-page-hero">                   
-                    <div class="vertical-center-js text-center">
-                        <h1>Browse Our Courses</h1>
-                        <p class="section-sub-title">Hurry, they fill up quickly.</p>
-                    </div>
-                </div>
+
+<header id="home" class="backstretched single-page-hero">
+    <div class="dark-overlay single-page-hero">
+        <div class="container single-page-hero">
+            <div class="vertical-center-js text-center">
+                <h1>@ViewData["Title"]</h1>
+                <p class="section-sub-title">Place your students in the most awesomest of classes</p>
             </div>
-        </header>
+        </div>
+    </div>
+</header>
 
-        <section id="our-courses">
-            <div class="section-inner">
-                <div class="container">
+<section id="our-courses">
+    <div class="section-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-xs-12" role="tabpanel">
                             <div class="row">
-                                <div class="col-xs-12" role="tabpanel">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <!-- Nav tabs -->
-                                            <ul class="nav nav-justified image-tabs" id="course-tabs" role="tablist">
-                                                <li role="presentation" class="summer-term active">
-                                                    <a href="#summer-term" aria-controls="summer-term" role="tab" data-toggle="tab" class="dark-overlay .half-opacity ">
-                                                        <span>Summer Term</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" class="winter-term">
-                                                    <a href="#winter-term" aria-controls="winter-term" role="tab" data-toggle="tab" class="dark-overlay .half-opacity ">
-                                                        <span>Winter Term</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" class="online-learning">
-                                                    <a href="#online-learning" aria-controls="online-learning" role="tab" data-toggle="tab" class="dark-overlay .half-opacity ">
-                                                        <span>Online Learning</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" class="online-learning">
-                                                    <a href="#online-learning" aria-controls="online-learning" role="tab" data-toggle="tab" class="dark-overlay .half-opacity ">
-                                                        <span>Foundation Courses</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" class="online-learning">
-                                                    <a href="#online-learning" aria-controls="online-learning" role="tab" data-toggle="tab" class="dark-overlay .half-opacity ">
-                                                        <span>Sports Science</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <!-- Tab panes -->
-                                            <div class="tab-content pt60" id="tabs-collapse">            
-                                                <div role="tabpanel" class="tab-pane fade in active" id="summer-term">
-                                                    <div class="tab-inner">     
-                                                        <div class="row">               
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Photography for Beginners</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$199</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Proffesional Photography</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$499</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Photoshop Basics</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$199</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>               
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="tabpanel" class="tab-pane fade" id="winter-term">
-                                                    <div class="tab-inner">
-                                                        <div class="row">
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Photography for Beginners</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$199</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Proffesional Photography</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$499</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Photoshop Basics</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$199</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Automotive Repair</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$249</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div> 
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Photography for Beginners</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$199</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Proffesional Photography</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$499</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>  
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="tabpanel" class="tab-pane fade" id="online-learning">
-                                                    <div class="tab-inner">
-                                                        <div class="row">
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Photoshop Basics</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$199</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Automotive Repair</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$249</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div> 
-                                                            <div class="col-sm-12 mb40">
-                                                                <div class="row">
-                                                                    <div class="col-sm-10 col-xs-12">
-                                                                        <h5><span>Photography for Beginners</span></h5>
-                                                                        <p class="lead">16 week course.</p>
-                                                                        <p class="mb20">Proactively parallel task vertical products for collaborative ideas. Monotonectally visualize functional functionalities vis-a-vis efficient products. Globally matrix bleeding-edge e-business with professional.</p>
-                                                                        <a href="single-course.html" class="btn btn-primary btn-green">View Details</a>
-                                                                    </div>
-                                                                    <div class="col-sm-2 col-xs-12 text-right">
-                                                                        <h1><span>$199</span></h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div> 
-                                                </div>                                   
-                                            </div>
-                                        </div>  
-                                    </div>       
+                                <div class="col-sm-12">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-justified image-tabs" id="course-tabs" role="tablist">
+                                        @foreach (var item in Model)
+                                        {
+                                            <li role="presentation" class="summer-term active">
+                                                <a href="#summer-term" aria-controls="summer-term" role="tab" data-toggle="tab" class=".half-opacity ">
+                                                    <span>@item.ScheduledClass.Course.CourseName</span>
+                                                </a>
+                                            </li>
+
+                                        }
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <!-- Tab panes -->
+                                    <p>
+                                        <a asp-action="Create">Create New</a>
+                                    </p>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Student.FullName)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.StudentId)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.ScheduledClass.Course.CourseName)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.ScheduledClass.StartDate)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.ScheduledClass.EndDate)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.ScheduledClass.InstructorName)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.ScheduledClass.Scs.Scsname)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.EnrollmentDate)
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Student.FullName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.StudentId)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.ScheduledClass.Course.CourseName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.ScheduledClass.StartDate)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.ScheduledClass.EndDate)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.ScheduledClass.InstructorName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.ScheduledClass.Scs.Scsname)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                                                    </td>
+                                                    <td>
+                                                        <a asp-action="Edit" asp-route-id="@item.EnrollmentId">Edit</a> |
+                                                        <a asp-action="Details" asp-route-id="@item.EnrollmentId">Details</a> |
+                                                        <a asp-action="Delete" asp-route-id="@item.EnrollmentId">Delete</a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.FullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StudentId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ScheduledClass.Course.CourseName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ScheduledClass.StartDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ScheduledClass.EndDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ScheduledClass.InstructorName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ScheduledClass.Scs.Scsname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EnrollmentDate)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Student.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StudentId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ScheduledClass.Course.CourseName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ScheduledClass.StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ScheduledClass.EndDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ScheduledClass.InstructorName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ScheduledClass.Scs.Scsname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.EnrollmentId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.EnrollmentId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.EnrollmentId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>

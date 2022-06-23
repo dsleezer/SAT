@@ -389,3 +389,8 @@
 .ps-5 {
     padding-left: 3rem !important;
 }
+
+
+#course-tabs .li {
+    background-color: blue !important;
+}
