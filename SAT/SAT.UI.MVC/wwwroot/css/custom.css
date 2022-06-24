@@ -413,39 +413,41 @@
 
 /*Logo img for TSASOA*/
 img.logo {
-    margin-bottom: 10px !important;
-    margin-top: 10px !important;
+    max-height: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+
 
 /*Banner Home*/
 #home {
-    background-image: url(/images/hero-bg.jpg);
+    background-image: url(/images/lightbulb.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.nav {
+    padding: 20px;
+}
 
 /*Home images*/
 #band-member-1 {
-    background-image: url(/images/band-member-1.jpg);
+    background-image: url(/images/booklibrary.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-bottom: 25px;
 }
 
 #band-member-2 {
-    background-image: url(/images/band-member-2.jpg);
+    background-image: url(/images/teamwork.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-bottom: 25px;
 }
 
-#band-member-3 {
-    background-image: url(/images/band-member-3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 #promo-3 {
     background-image: url(/images/section-bg-3.jpg);
