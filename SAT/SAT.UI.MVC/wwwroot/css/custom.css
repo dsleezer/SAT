@@ -394,5 +394,20 @@
 #course-tabs li {
     background-color: rgba(102, 51, 153, 0.8);
     min-height: 4em;
-
 }
+
+    #course-tabs li a {
+        height: 100%;
+        display: block;
+    }
+
+    #our-courses .container{
+        width: 85%
+    }
+#enrollment tbody tr:not(.active) {
+    display: none;
+}
+#enrollment tr td{
+    padding: 2em;
+}
+
