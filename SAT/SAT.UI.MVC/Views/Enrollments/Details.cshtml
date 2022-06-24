@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Details";
 }
+<div class="container">
 
 <h2>Details</h2>
 
@@ -17,20 +18,33 @@
             @Html.DisplayFor(model => model.EnrollmentDate)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.ScheduledClass)
+            @Html.DisplayNameFor(model => model.ScheduledClass.Course.CourseName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.ScheduledClass.InstructorName)
+            @Html.DisplayFor(model => model.ScheduledClass.Course.CourseName)
+        </dd>        
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduledClass.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduledClass.StartDate)
+        </dd>        
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduledClass.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduledClass.EndDate)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Student)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Student.Email)
+            @Html.DisplayFor(model => model.Student.FullName)
         </dd>
     </dl>
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.EnrollmentId">Edit</a> |
     <a asp-action="Index">Back to List</a>
+</div>
 </div>

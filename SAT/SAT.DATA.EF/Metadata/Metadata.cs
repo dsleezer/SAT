@@ -52,6 +52,7 @@ namespace SAT.DATA.EF.Models//.Metadata
         [Required(ErrorMessage = "Required")]
         [Display(Name = "Enrollment Date")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
+        [DataType (DataType.Date)]
         public DateTime EnrollmentDate { get; set; }
     }
 
@@ -67,12 +68,14 @@ namespace SAT.DATA.EF.Models//.Metadata
         [Required(ErrorMessage = "Required")]
         [Display(Name = "Start Date")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
+        [DataType(DataType.Date)]
 
         public DateTime StartDate { get; set; }
 
         [Required(ErrorMessage = "Required")]
         [Display(Name = "End Date")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
+        [DataType(DataType.Date)]
 
         public DateTime EndDate { get; set; }
 

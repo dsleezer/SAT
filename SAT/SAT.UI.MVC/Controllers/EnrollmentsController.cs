@@ -48,7 +48,7 @@ namespace SAT.UI.MVC.Controllers
 
             var enrollment = await _context.Enrollments
                 .Include(e => e.ScheduledClass)
-                .Include(e => e.Student)
+                .Include(e => e.Student).Include(e => e.ScheduledClass.Course)
                 .FirstOrDefaultAsync(m => m.EnrollmentId == id);
             if (enrollment == null)
             {
@@ -62,7 +62,11 @@ namespace SAT.UI.MVC.Controllers
         public IActionResult Create()
         {
             ViewData["ScheduledClassId"] = new SelectList(_context.ScheduledClasses, "ScheduledClassId", "InstructorName");
-            ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "Email");
+            ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "FullName");
+
+            var sATContext = _context.Enrollments.Include(e => e.ScheduledClass).Include(e => e.Student).Include(e => e.ScheduledClass.Course).Include(e => e.ScheduledClass.Scs).ToList();
+            ViewBag.Info = sATContext;
+
             return View();
         }
 
@@ -80,7 +84,7 @@ namespace SAT.UI.MVC.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ScheduledClassId"] = new SelectList(_context.ScheduledClasses, "ScheduledClassId", "InstructorName", enrollment.ScheduledClassId);
-            ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "Email", enrollment.StudentId);
+            ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "FullName", enrollment.StudentId);
             return View(enrollment);
         }
 
@@ -97,8 +101,12 @@ namespace SAT.UI.MVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["ScheduledClassId"] = new SelectList(_context.ScheduledClasses, "ScheduledClassId", "InstructorName", enrollment.ScheduledClassId);
+            ViewData["ScheduledClassId"] = new SelectList(_context.ScheduledClasses.Include(s => s.Course), "ScheduledClassId", "CourseName", enrollment.ScheduledClassId);
             ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "FullName", enrollment.StudentId);
+
+            var sATContext = _context.Enrollments.Include(e => e.ScheduledClass).Include(e => e.Student).Include(e => e.ScheduledClass.Course).Include(e => e.ScheduledClass.Scs).ToList();
+            ViewBag.Info = sATContext;
+
             return View(enrollment);
         }
 
@@ -135,7 +143,7 @@ namespace SAT.UI.MVC.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ScheduledClassId"] = new SelectList(_context.ScheduledClasses, "ScheduledClassId", "InstructorName", enrollment.ScheduledClassId);
-            ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "Email", enrollment.StudentId);
+            ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "FullName", enrollment.StudentId);
             return View(enrollment);
         }
 
@@ -149,7 +157,7 @@ namespace SAT.UI.MVC.Controllers
 
             var enrollment = await _context.Enrollments
                 .Include(e => e.ScheduledClass)
-                .Include(e => e.Student)
+                .Include(e => e.Student).Include(e => e.ScheduledClass.Course)
                 .FirstOrDefaultAsync(m => m.EnrollmentId == id);
             if (enrollment == null)
             {

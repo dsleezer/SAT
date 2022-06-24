@@ -1,12 +1,14 @@
 ﻿@model SAT.DATA.EF.Models.ScheduledClass
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Scheduled Class";
 }
 
-<h2>Edit</h2>
+<div class="container">
 
-<h4>ScheduledClass</h4>
+
+<h2>@ViewData["Title"]</h2>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,7 +16,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ScheduledClassId" />
             <div class="form-group">
-                <label asp-for="CourseId" class="control-label"></label>
+                <label asp-for="CourseId" class="control-label">Course Name</label>
                 <select asp-for="CourseId" class="form-control" asp-items="ViewBag.CourseId"></select>
                 <span asp-validation-for="CourseId" class="text-danger"></span>
             </div>
@@ -51,7 +53,9 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-default">Back to List</a>
+</div>
+
 </div>
 
 @section Scripts {
