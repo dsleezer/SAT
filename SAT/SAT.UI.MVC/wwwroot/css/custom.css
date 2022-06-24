@@ -390,7 +390,7 @@
     padding-left: 3rem !important;
 }
 
-
+/*Enrollment View - Table*/
 #course-tabs li {
     background-color: rgba(102, 51, 153, 0.8);
     min-height: 4em;
@@ -411,3 +411,21 @@
     padding: 2em;
 }
 
+/*Logo img for TSASOA*/
+img.logo {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+
+/*Banner Home*/
+#home {
+    background-image: url(~/images/teamwork.jpg)
+}
+
+/*Home images*/
+#band-member-2 {
+    background-image: url(~/images/band-member.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
