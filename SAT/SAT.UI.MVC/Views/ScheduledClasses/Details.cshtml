@@ -1,13 +1,13 @@
 ﻿@model SAT.DATA.EF.Models.ScheduledClass
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Scheduled Class Details";
 }
+<div class="container">
 
-<h2>Details</h2>
+<h2>@ViewData["Title"]</h2>
 
 <div>
-    <h4>ScheduledClass</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -38,10 +38,10 @@
             @Html.DisplayNameFor(model => model.Course)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Course.CourseDescription)
+            @Html.DisplayFor(model => model.Course.CourseName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Scs)
+            @Html.DisplayNameFor(model => model.Scs.Scsname)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Scs.Scsname)
@@ -49,6 +49,8 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.ScheduledClassId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.ScheduledClassId" class="btn btn-default">Edit</a> |
+    <a asp-action="Index" class="btn btn-default">Back to List</a>
+</div>
+
 </div>

@@ -1,8 +1,10 @@
 ﻿@model SAT.DATA.EF.Models.Enrollment
 
 @{
-    ViewData["Title"] = "Edit ";
+    ViewData["Title"] = "Edit";
 }
+
+<div class="container">
 
 <h2>@ViewData["Title"]</h2>
 
@@ -19,7 +21,7 @@
                 <span asp-validation-for="StudentId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ScheduledClassId" class="control-label"></label>
+                <label asp-for="ScheduledClassId" class="control-label">Course Id</label>
                 <select asp-for="ScheduledClassId" class="form-control" asp-items="ViewBag.ScheduledClassId"></select>
                 <span asp-validation-for="ScheduledClassId" class="text-danger"></span>
             </div>
@@ -36,7 +38,8 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-default">Back to List</a>
+</div>
 </div>
 
 @section Scripts {
