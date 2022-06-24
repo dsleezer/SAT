@@ -419,12 +419,64 @@ img.logo {
 
 /*Banner Home*/
 #home {
-    background-image: url(~/images/teamwork.jpg)
+    background-image: url(/images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+
 /*Home images*/
+#band-member-1 {
+    background-image: url(/images/band-member-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 #band-member-2 {
-    background-image: url(~/images/band-member.jpg);
+    background-image: url(/images/band-member-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#band-member-3 {
+    background-image: url(/images/band-member-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#promo-3 {
+    background-image: url(/images/section-bg-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#contact-us {
+    background-image: url(/images/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#course-tabs li.summer-term {
+    background-image: url(/images/image-tab-bg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#course-tabs li.winter-term {
+    background-image: url(/images/image-tab-bg-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#course-tabs li.online-learning {
+    background-image: url(/images/image-tab-bg-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

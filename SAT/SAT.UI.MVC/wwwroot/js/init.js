@@ -94,10 +94,10 @@ jQuery(document).ready(function() {
     event.preventDefault();
   });
 
-  $("#home.backstretched").backstretch(["assets/images/hero-bg.jpg", "assets/images/gallery-6.jpg", "assets/images/section-bg-2.jpg", ], {
-    duration: 4000,
-    fade: 800
-  });
+  //$("#home.backstretched").backstretch(["../images/hero-bg.jpg", "../images/gallery-6.jpg", "../images/section-bg-2.jpg", ], {
+  //  duration: 4000,
+  //  fade: 800
+  //});
 
   $('.dropdown').on('show.bs.dropdown', function(e) {
     var $dropdown = $(this).find('.dropdown-menu');
